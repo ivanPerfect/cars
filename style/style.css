@@ -52,7 +52,7 @@ a {
 .header-main {
   background-color: transparent;
   position: absolute;
-  z-index: 5;
+  z-index: 10;
   left: 0;
   right: 0;
 }
@@ -80,8 +80,8 @@ a {
   right: 0;
 }
 .title {
-  padding-top: 105px;
-  padding-bottom: 40px;
+  padding-top: 50px;
+  padding-bottom: 20px;
   font-size: 96px;
   font-weight: 700;
 }
@@ -180,7 +180,7 @@ a {
   padding: 19px 138px 19px 200px;
   min-width: 64px;
 }
-.lease-work__item+.lease-work__item{
+.lease-work__item + .lease-work__item {
   margin-top: 40px;
 }
 .lease-work__item::before {
@@ -202,6 +202,91 @@ a {
   top: 0;
 }
 
+/* video */
+.video {
+  padding-bottom: 50px;
+  text-align: center;
+}
+.tVideo {
+  margin-bottom: 20px;
+}
+.video__text {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.video__content {
+  display: block;
+  margin: 0 auto;
+}
+
+/* important */
+
+.important {
+  padding-bottom: 50px;
+}
+.tImportant {
+  margin-bottom: 20px;
+}
+.important__text1 {
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+.important__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.important__img {
+  margin-bottom: 10px;
+}
+
+/* contact__form */
+.contact__form {
+  padding-bottom:  50px;
+  text-align: center;
+}
+.cTitle {
+  margin-bottom: 20px;
+}
+.contact__text {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 0 100px;
+}
+.form{
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.input{
+  width: 200px;
+  padding: 18px 20px;
+  display: inline-block;
+  border: 1px solid blue;
+  margin-bottom: 20px;
+}
+.contact__area {
+  width: 100%;
+  padding: 18px 20px;
+  resize: none;
+  border: 1px solid blue;
+  margin-bottom: 20px;
+  height: 260px;
+}
+.form__btn {
+  text-transform: uppercase;
+  background-color: var(--bgc);
+  color: var(--links);
+  width: 150px;
+  height: 40px;
+  padding: 10px 50px;
+  font-size: 24px;
+  margin: 0 auto;
+}
 /* footer */
 .footer {
   background-color: var(--bgc);
