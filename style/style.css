@@ -51,6 +51,10 @@ a {
 }
 .header-main {
   background-color: transparent;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
 }
 .menu__list {
   display: flex;
@@ -69,7 +73,11 @@ a {
 .top {
   color: var(--links);
   text-align: center;
-  padding-bottom:50px ;
+  padding-top: 250px;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
 }
 .title {
   padding-top: 105px;
@@ -77,19 +85,123 @@ a {
   font-size: 96px;
   font-weight: 700;
 }
+.top__btn {
+  border: none;
+}
 .top__link {
+  max-width: 420px;
   background-color: var(--bgc);
   padding: 23px;
-  max-width: 420px;
   display: inline-block;
   font-size: 26px;
   font-weight: 700;
   width: 100%;
 }
-
+.swiper::after {
+  content: "";
+  background-color: rgba(21, 21, 21, 0.3);
+  z-index: 5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
 .swiper-slide {
   height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+.swiper-pagination-bullet {
+  width: 120px;
+  height: 4px;
+  background-attachment: var(--bgc);
+  border-radius: 0;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  height: 6px;
+  background-color: var(--links);
+}
+
+/* why lease */
+.why-lease {
+  padding: 50px 0;
+}
+.title {
+  margin-bottom: 50px;
+  font-size: 46px;
+  font-weight: 700;
+  text-align: center;
+}
+.why-lease__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+.why-lease__img {
+  margin-bottom: 30px;
+}
+.why-lease__title {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.why-lease__text {
+  text-align: left;
+}
+
+/*lease-work*/
+
+.lease-work {
+  padding-bottom: 50px;
+}
+.lease-work__inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.lease-work__title {
+  font-style: 24px;
+  font-weight: 700;
+  padding-top: 20px;
+}
+.lease-work__list {
+  padding: 30px 0 30px;
+  counter-reset: myCount;
+}
+.lease-work__item {
+  list-style-type: none;
+  width: 260px;
+  position: relative;
+  margin-left: auto;
+  box-sizing: content-box;
+  padding: 19px 138px 19px 200px;
+  min-width: 64px;
+}
+.lease-work__item+.lease-work__item{
+  margin-top: 40px;
+}
+.lease-work__item::before {
+  counter-increment: myCount;
+  content: counter(myCount);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--links);
+  background-color: #06f;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 /* footer */
 .footer {
   background-color: var(--bgc);
