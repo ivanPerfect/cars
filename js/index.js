@@ -8,3 +8,25 @@ const swiper = new Swiper(".swiper", {
     disableOnInteraction: false,
   },
 });
+
+const tabItem = document.querySelectorAll(".tabs__btn--item");
+const tabContent = document.querySelectorAll(".tab__content--item");
+
+tabItem.forEach((el) => {
+  el.addEventListener("click", open);
+});
+
+function open(e) {
+  const tabTarget = e.currentTarget;
+  const button = tabTarget.dataset.button;
+
+  tabItem.forEach((item) => {
+    item.classList.remove("activeTabs");
+  });
+  tabTarget.classList.add("activeTabs");
+
+  tabContent.forEach((item) => {
+    item.classList.remove("activeTabs");
+  });
+  document.querySelector(`#${button}`).classList.add('activeTabs');
+}

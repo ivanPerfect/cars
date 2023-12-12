@@ -246,7 +246,7 @@ a {
 
 /* contact__form */
 .contact__form {
-  padding-bottom:  50px;
+  padding-bottom: 50px;
   text-align: center;
 }
 .cTitle {
@@ -258,14 +258,14 @@ a {
   margin-bottom: 20px;
   padding: 0 100px;
 }
-.form{
+.form {
   max-width: 500px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.input{
+.input {
   width: 200px;
   padding: 18px 20px;
   display: inline-block;
@@ -292,10 +292,10 @@ a {
 }
 
 /* BLOG */
-.blog{
+.blog {
   padding-bottom: 50px;
 }
-.blog__items{
+.blog__items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -305,7 +305,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.blog__img{
+.blog__img {
   margin-bottom: 20px;
   width: 100%;
 }
@@ -314,20 +314,67 @@ a {
   font-weight: 600;
   flex-basis: 440px;
 }
-.blog__link{
+.blog__link {
   background-color: #06f;
   padding: 4px 20px;
 }
-.blog__btn{
+.blog__btn {
   width: 200px;
   height: 50px;
   margin: 0 auto;
   margin-top: 50px;
 }
-.blog__btn2{
+.blog__btn2 {
   text-align: center;
   padding: 10px 40px;
   background-color: var(--bgc);
+}
+
+/* choose */
+.choose {
+  padding-bottom: 50px;
+}
+.tabs__btn {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 50px;
+}
+.tabs__btn--item {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0;
+}
+.tab__content--item {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 20px;
+}
+.tab__content--item.activeTabs {
+  display: grid;
+}
+.card {
+  text-align: center;
+  border: 1px solid #06f;
+}
+.card__img {
+  margin-bottom: 10px;
+}
+.card__title,
+.card__price {
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.card__text {
+  padding-bottom: 10px;
+}
+.card__link {
+  display: block;
+  color: #06f;
+  border: 1px solid #06f;
 }
 /* footer */
 .footer {
