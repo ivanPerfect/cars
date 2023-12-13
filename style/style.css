@@ -221,6 +221,8 @@ a {
 .video__content {
   display: block;
   margin: 0 auto;
+  width: 100%;
+  margin: 0 20px;
 }
 
 /* important */
@@ -421,4 +423,67 @@ a {
   display: flex;
   gap: 40px;
   justify-content: center;
+}
+
+.menu__btn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+.menu__btn span {
+  height: 2px;
+  background-color: var(--links);
+  width: 100%;
+}
+/* media */
+@media (max-width: 1200px) {
+  .important__list {
+    gap: 30px 20px;
+  }
+  .important__img {
+    width: 100%;
+  }
+}
+@media (max-width: 860px) {
+  .important__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .important__item {
+    margin: 10px;
+  }
+  .why-lease__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .menu__btn {
+    display: flex;
+  }
+  .menu__btn, .logo{
+    position: relative;
+    z-index: 6;
+  }
+  .menu__list {
+    position: absolute;
+    z-index: 5;
+    background-color: #151515;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    height: 100vh;
+    padding-top: 100px;
+    transform: translateY(-100%);
+  }
+  .menu__list.activeMenu{
+    transform: translateY(0%)
+  }
 }
